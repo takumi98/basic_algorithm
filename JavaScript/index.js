@@ -9,5 +9,3 @@ let tm = ['30'];
 th = (th + Math.floor((tm + 30) / 60)) % 24;
 // 60の乗算で60を超過したばあい、超過分のみ表示
 tm = (tm + 30) % 60;
-th = String(th);
-tm = String(tm);
