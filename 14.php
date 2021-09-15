@@ -27,7 +27,7 @@ for($i = 1; $i <= $user_number; $i++){
     echo $update_user;
 }
 
-//回答
+// 回答
 $n = trim(fgets(STDIN));
 $userToBlood = [];
 
