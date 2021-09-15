@@ -3,14 +3,14 @@
 <?php
 // 自分のコード
 
+// 標準入力
 while ($line = fgets(STDIN)) {
     $tmp[] = trim($line);
 }
-
-// 分割して配列を作る
 foreach ($tmp as $value) {
     $inputs[] = explode(' ', $value);
 }
+
 $user_number = $inputs[0][0];
 $type_number = $inputs[$user_number + 1][0];
 
@@ -34,4 +34,16 @@ $userToBlood = [];
 for ($i = 0; $i < $n; $i++) {
     [$user, $blood] = explode(' ', trim(fgets(STDIN)));
     $userToBlood[$user] = $blood;
+}
+
+$m = trim(fgets(STDIN));
+$bloodToFortune = [];
+
+for ($i = 0; $i < $m; $i++) {
+    [$blood, $fortune] = explode(' ', trim(fgets(STDIN)));
+    $bloodToFortune[$blood] = $fortune;
+}
+
+foreach ($userToBlood as $user => $blood) {
+    echo $user . ' ' . $bloodToFortune[$blood] . "\n";
 }
