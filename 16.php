@@ -1,5 +1,6 @@
 <?php
 // 例外処理
+
 [$n, $m, $l] = explode(' ', trim(fgets(STDIN)));
 
 $d = [];
